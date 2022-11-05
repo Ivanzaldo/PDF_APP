@@ -25,3 +25,4 @@ writer.add_js("this.print({bUI:true,bSilent:false,bShrinkToFit:true});")
 # write to document-output.pdf
 with open("PDF_TEST/PyPDF2-output.pdf", "wb") as fp:
     writer.write(fp)
+
