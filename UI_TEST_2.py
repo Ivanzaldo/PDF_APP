@@ -102,6 +102,28 @@ Tip_initial = Hovertip(initial_page,'Add the number of the initial page from whi
 final_page.place(relx=0.3, rely=.45,relheight=0.05,relwidth=.175, anchor=tk.E)
 Tip_final = Hovertip(final_page,'Add the number of the final page from which you want to finish selecting.')
 ########################## BUTTONS ##################################
+# Read the Image
+image_return = Image.open("imagenes/return.png")
+# Resize the image using resize() method
+resize_image_return = image_return.resize((int(window_width*.05), int(window_height*.05)))
+img_return = ImageTk.PhotoImage(resize_image_return)
+
+
+def return_clicked():
+    global filename 
+    print(filename)
+   
+return_button = tk.Button(
+    merge_window
+    # ,text='RETURN'
+    # ,font=("Franklin Gothic bond", 10)
+    ,image = img_return
+    ,background='#FF1C3B'
+    ,foreground='black'
+    ,command=return_clicked
+)
+return_button.place(relx=0.065, rely=.05,relheight=.05,relwidth=.05, anchor=tk.N)
+
 check_all_file = tk.IntVar()
 check_but_all_file = tk.Checkbutton(merge_window, text = 'All pages', variable = check_all_file,background='#FF1C3B',foreground='black')
 check_but_all_file.place(relx=0.3, rely=.55,relheight=0.05,relwidth=.175, anchor=tk.E)

@@ -48,12 +48,10 @@ resize_image_merge = image_merge.resize((int(root.winfo_width()*.2), int(root.wi
 resize_image_split = image_split.resize((int(root.winfo_width()*.2), int(root.winfo_height()*.25)))
 img_merge = ImageTk.PhotoImage(resize_image_merge)
 img_split = ImageTk.PhotoImage(resize_image_split)
+print(root.winfo_width())
+print(root.winfo_height())
 
 def merge_clicked():
-    # showinfo(
-    #     title='Option selected',
-    #     message='Merge button clicked!'
-    # )
     root.destroy()
     merge_window = tk.Tk()
     merge_window.mainloop()
@@ -61,7 +59,6 @@ def merge_clicked():
 
 merge_button = ttk.Button(
     root
-    #,text='MERGE'
     ,image = img_merge
     ,command=merge_clicked
 ).place(relx=0.4, rely=.5,relheight=0.25,relwidth=.2, anchor=tk.E)
@@ -75,17 +72,12 @@ label_merge_button = tk.Label(
     ).place(relx=0.4, rely=.35,relheight=0.05,relwidth=.2, anchor=tk.E) 
 
 def split_clicked():
-    # showinfo(
-    #     title='Option selected',
-    #     message='Split button clicked!'
-    # )
     split_window = tk.Tk()
     split_window.mainloop()
 
 
 split_button = ttk.Button(
     root
-    #,text='SPLIT'
     ,image = img_split
     ,command=split_clicked
 ).place(relx=0.6, rely=.5,relheight=0.25,relwidth=.2, anchor=tk.W)

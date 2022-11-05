@@ -10,11 +10,10 @@ from PyPDF2 import PdfMerger
 from PyPDF2 import PdfFileReader
 
 from winreg import *
+
 ########################## GET DOWNLOAD FOLDER ##################################
 with OpenKey(HKEY_CURRENT_USER, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders') as key:
     Downloads = QueryValueEx(key, '{374DE290-123F-4565-9164-39C4925E467B}')[0]
-
-
 ########################## SET MAIN WINDOW ##################################
 split_window = tk.Tk()
 split_window.title('PDF_SPLIT')
@@ -106,6 +105,27 @@ Tip_initial = Hovertip(initial_page,'Add the number of the initial page from whi
 final_page.place(relx=0.3, rely=.45,relheight=0.05,relwidth=.175, anchor=tk.E)
 Tip_final = Hovertip(final_page,'Add the number of the final page from which you want to finish selecting.')
 ########################## BUTTONS ##################################
+# Read the Image
+image_return = Image.open("imagenes/return.png")
+# Resize the image using resize() method
+resize_image_return = image_return.resize((int(window_width*.05), int(window_height*.05)))
+img_return = ImageTk.PhotoImage(resize_image_return)
+
+def return_clicked():
+    global filename 
+    print(filename)
+   
+return_button = tk.Button(
+    split_window
+    # ,text='RETURN'
+    # ,font=("Franklin Gothic bond", 10)
+    ,image = img_return
+    ,background='#FF1C3B'
+    ,foreground='black'
+    ,command=return_clicked
+)
+return_button.place(relx=0.065, rely=.05,relheight=.05,relwidth=.05, anchor=tk.N)
+
 check_all_file = tk.IntVar()
 check_but_all_file = tk.Checkbutton(split_window, text = 'Join all the ranges into one pdf file', variable = check_all_file,background='#FF1C3B',foreground='black')
 check_but_all_file.place(relx=0.38, rely=.65,relheight=0.05,relwidth=.35, anchor=tk.E)
