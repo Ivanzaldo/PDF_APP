@@ -103,7 +103,7 @@ def window_root():
     root.mainloop()
 
 def window_merge():
-    ########################## SET MAIN WINDOW ##################################
+    ########################## SET MERGE WINDOW ##################################
     merge_window = tk.Tk()
     merge_window.title('PDF_MERGE')
     merge_window.iconbitmap('IMAGENES/ICONO.ico')
@@ -367,7 +367,7 @@ def window_split():
     ########################## GET DOWNLOAD FOLDER ##################################
     with OpenKey(HKEY_CURRENT_USER, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders') as key:
         Downloads = QueryValueEx(key, '{374DE290-123F-4565-9164-39C4925E467B}')[0]
-    ########################## SET MAIN WINDOW ##################################
+    ########################## SET SPLIT WINDOW ##################################
     split_window = tk.Tk()
     split_window.title('PDF_SPLIT')
     split_window.iconbitmap('IMAGENES/ICONO.ico')
