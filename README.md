@@ -1,2 +1,2 @@
-<h2> PDF_APP </ h2>
+<h1> PDF_APP </ h1>
 <h2> PDF APP USING PYTHON </ h2>
