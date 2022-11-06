@@ -48,15 +48,11 @@ resize_image_merge = image_merge.resize((int(root.winfo_width()*.2), int(root.wi
 resize_image_split = image_split.resize((int(root.winfo_width()*.2), int(root.winfo_height()*.25)))
 img_merge = ImageTk.PhotoImage(resize_image_merge)
 img_split = ImageTk.PhotoImage(resize_image_split)
-print(root.winfo_width())
-print(root.winfo_height())
 
 def merge_clicked():
-    root.destroy()
     merge_window = tk.Tk()
     merge_window.mainloop()
     
-
 merge_button = ttk.Button(
     root
     ,image = img_merge
