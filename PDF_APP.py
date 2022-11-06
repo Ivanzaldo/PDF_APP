@@ -35,7 +35,7 @@ class root(tk.Tk):
         ########################## WINDOW ############################
         self.root = self
         self.root.title('PDF_TOOLS')
-        self.root.iconbitmap(path_calc.resource_path('IMAGENES/ICONO.ico'))
+        self.root.iconbitmap(path_calc.resource_path('IMAGENES\\ICONO.ico'))
         self.root.configure(bg='black')
         #INITIAL SIZE#####################
         window_width = 600
@@ -87,8 +87,8 @@ class root(tk.Tk):
         label_down.place(relx=0.5, rely=1,relheight=0.10,relwidth=1, anchor=tk.S)
         ########################## BUTTONS ###########################
         ######### Read the Image ##########
-        image_merge = Image.open(path_calc.resource_path('IMAGENES/Merge_Vertical.png'))
-        image_split = Image.open(path_calc.resource_path('IMAGENES/Split_Horizontal.png'))
+        image_merge = Image.open(path_calc.resource_path('IMAGENES\\Merge_Vertical.png'))
+        image_split = Image.open(path_calc.resource_path('IMAGENES\\Split_Horizontal.png'))
         ######### Resize the image ########
         resize_image_merge = image_merge.resize((int(self.root.winfo_width()*.2), int(self.root.winfo_height()*.25)))
         resize_image_split = image_split.resize((int(self.root.winfo_width()*.2), int(self.root.winfo_height()*.25)))
@@ -126,7 +126,7 @@ class merge_window(tk.Tk):
         ########################## WINDOW ############################
         self.merge_window = self
         self.merge_window.title('PDF_MERGE')
-        self.merge_window.iconbitmap(path_calc.resource_path('IMAGENES/ICONO.ico'))
+        self.merge_window.iconbitmap(path_calc.resource_path('IMAGENES\\ICONO.ico'))
         self.merge_window.configure(bg='black')
         #INITIAL SIZE#####################
         window_width = 600
@@ -202,7 +202,7 @@ class merge_window(tk.Tk):
         Tip_final = Hovertip(self.final_page,'Add the number of the final page from which you want to finish selecting.')
         ########################## BUTTONS ###########################
         # Read the Image
-        self.image_return = Image.open(path_calc.resource_path('IMAGENES/return.png'))
+        self.image_return = Image.open(path_calc.resource_path('IMAGENES\\return.png'))
         # Resize the image using resize() method
         self.resize_image_return = self.image_return.resize((int(window_width*.05), int(window_height*.05)))
         self.img_return = ImageTk.PhotoImage(self.resize_image_return)
@@ -388,7 +388,7 @@ class split_window(tk.Tk):
         ########################## WINDOW ############################
         self.split_window = self
         self.split_window.title('PDF_SPLIT')
-        self.split_window.iconbitmap(path_calc.resource_path('IMAGENES/ICONO.ico'))
+        self.split_window.iconbitmap(path_calc.resource_path('IMAGENES\\ICONO.ico'))
         self.split_window.configure(bg='black')
         #INITIAL SIZE#####################
         window_width = 600
@@ -464,7 +464,7 @@ class split_window(tk.Tk):
         Tip_final = Hovertip(self.final_page,'Add the number of the final page from which you want to finish selecting.')
         ########################## BUTTONS ###########################
         # Read the Image
-        self.image_return = Image.open(path_calc.resource_path('IMAGENES/return.png'))
+        self.image_return = Image.open(path_calc.resource_path('IMAGENES\\return.png'))
         # Resize the image using resize() method
         self.resize_image_return = self.image_return.resize((int(window_width*.05), int(window_height*.05)))
         self.img_return = ImageTk.PhotoImage(self.resize_image_return)

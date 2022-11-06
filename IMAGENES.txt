@@ -1,0 +1,6 @@
+a.datas += [('IMAGENES\\ICONO.ico','C:\\Users\\ivan_\\Escritorio\\Proyectos\\PDF_APP\\PDF_APP\\IMAGENES\\ICONO.ico', "DATA"),
+            ('IMAGENES\\ICONO.png','C:\\Users\\ivan_\\Escritorio\\Proyectos\\PDF_APP\\PDF_APP\\IMAGENES\\ICONO.png', "DATA"),
+            ('IMAGENES\\Merge_Vertical.png','C:\\Users\\ivan_\\Escritorio\\Proyectos\\PDF_APP\\PDF_APP\\IMAGENES\\Merge_Vertical.png', "DATA"),
+            ('IMAGENES\\Split_Horizontal.png','C:\\Users\\ivan_\\Escritorio\\Proyectos\\PDF_APP\\PDF_APP\\IMAGENES\\Split_Horizontal.png', "DATA"),
+            ('IMAGENES\\return.png','C:\\Users\\ivan_\\Escritorio\\Proyectos\\PDF_APP\\PDF_APP\\IMAGENES\\return.png', "DATA")
+            ]
